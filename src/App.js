@@ -1,20 +1,17 @@
 import React from 'react';
 import './App.css';
-import { Provider } from 'react-redux';
-import store from "./redux/store";
-import BooksContainer from "./components/BooksContainer";
-
+import { IconContext } from 'react-icons';
+import { FaReact } from 'react-icons/fa';
+import { MdAlarm } from 'react-icons/md';
 function App() {
   return (
-    <div className="App">
-        <Provider store={store}>
-            <BooksContainer/>
-           {/* <ItemContainer/>
-            <ItemContainer cake/>
-            <IceCreamComponent/>
-            <NewCakeContainer/>*/}
-        </Provider>
-    </div>
+      <IconContext.Provider value={{ color: "red", size: "15em"}}>
+        <div className="App">
+          <FaReact/>
+          <MdAlarm/>
+        </div>
+      </IconContext.Provider>
+
   );
 }
 
